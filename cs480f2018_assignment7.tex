@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+\newcommand{\command}[1]{``\lstinline{#1}''}
+\newcommand{\program}[1]{\lstinline{#1}}
+%\newcommand{\url}[1]{\lstinline{#1}}
+\newcommand{\channel}[1]{\lstinline{#1}}
+\newcommand{\option}[1]{``{#1}''}
+\newcommand{\step}[1]{``{#1}''}
+
+\long\def\omitit #1{}
+
+\newcommand{\assignmentduedate}{6 December}
+\newcommand{\assignmentassignedate}{ 29 November}
+\newcommand{\assignmentnumber}{Seven}
+
+\newcommand{\labyear}{2018}
+\newcommand{\labtime}{2:30 pm}
+
+\newcommand{\assigneddate}{Assigned:  \assignmentassignedate, \labyear{} at \labtime{}}
+\newcommand{\duedate}{Due:  \assignmentduedate, \labyear{} at \labtime{}}
+
+\usepackage{pifont}
+\newcommand{\checkmark}{\ding{51}}
+\newcommand{\naughtmark}{\ding{55}}
+
+% Enable margin notes to catch student attention
+
+\usepackage{marginnote}
+\reversemarginpar
+\renewcommand*{\raggedrightmarginnote}{\centering}
+
+\newcommand{\caution}[1]{\null\hfill\LARGE{\faWarning{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\discuss}[1]{\null\hfill\LARGE{\faCommentO{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\resource}[1]{\null\hfill\LARGE{\faLink{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\think}[1]{\null\hfill\LARGE{\faCogs{}}\newline\scriptsize{\em{#1}}}
+
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=magenta,
+}
+
+\usepackage{fancyhdr}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\usepackage{marginnote}
+\reversemarginpar
+\renewcommand*{\raggedrightmarginnote}{\centering}
+
+\fancyhf{}
+\rhead{Computer Science 480}
+\lhead{ Assignment \assignmentnumber{} }
+\rfoot{Page \thepage}
+\lfoot{\duedate}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+\newcommand{\labtitle}[1]
+{
+  \begin{center}
+    \begin{center}
+      \bf
+      CMPSC 480 \\ Software Innovation I\\
+      Fall 2018\\
+      \medskip
+    \end{center}
+    \bf
+    #1
+  \end{center}
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\labtitle{Assignment \assignmentnumber{} }
+\begin{center} \textbf{ \assigneddate{} \\ \duedate{} } \end{center} 
+\noindent \textbf{ }
+
+%\vspace{-0.05in}
+\section*{Objectives}
+
+
+To participate in a software project review exercise using the practice of software management review and peer learning. To learn how to review a project from a broad perspective and create a checklist of to do items for the project author. To engage in a collaborative process of project status review and to ensure the final project accomplishes the items outlined by the reviewer. To prepare a concise elevator pitch and to present it to the software innovators in the course.
+
+% https://www.ittoolkit.com/articles/project-checkpoints
+% create a checklist of to do items
+
+%\vspace{-0.05in}
+\section*{Reading Assignment}
+%\vspace{-0.05in}
+
+To do well on this assignment, you
+should first read the \href{https://www.data-solutions.ch/2018/03/five-types-of-reviews-for-projects.html}{Five types of reviews for projects} to get an overview of various project management reviewing tactics. Then, you should study \href{https://www.pmi.org/learning/library/tool-project-management-review-process-7881}{Project Managemtn Review Process} article by Project Management Institute.
+Finally, to prepare a strong elevator pitch please review \href{
+https://mcb.unco.edu/students/networking-night/examples-MCB-Pitch-Contest.aspx}{Example Elevator Pitches from University of Northern Colorado} and \href{https://theinterviewguys.com/write-elevator-pitch/}{The Interview Guys}.
+
+%\vspace{-0.05in}
+\section*{Software Project Review}
+%\vspace{-0.05in}
+Unlike code review, which looks at the technical aspects of the software, software management review evaluates the project's status. In this process a reviewer will assess the progress of the project, assess the planned schedule, confirm project requirements, and develop a checklist of items the author should complete before the project deadline.
+
+Each software innovator must review at least one project. After the author-reviewer pairing has been established please update the \href{https://docs.google.com/spreadsheets/d/1p5N6JGmYllYSUAc4E1CcibHz30lQqyM_ZC1RfTphdEI/edit?usp=sharing}{CMPSC 480 Software Innovators Google Spreadsheet} with your reviewing pairing information. Make sure the link to your software project is correct and then add your name in the ``Software Project Reviewer'' column for the selected author. 
+
+
+\subsection*{Author Preparation}
+Prepare for the review process by looking over your project repository, making sure you are able to explain the overall project concisely and various components of your project repository. Also, be prepared to discuss the status of your project and the major milestones you have completed and still have to complete. In this informal project review process, you, the author, will drive the review by sitting at the computer with a control of the keyboard and the mouse, opening various windows and files, pointing out and explaining the project structure and its components.
+
+\newpage
+
+\subsection*{Reviewer Process}
+Before the start of the review process, look over the course project assignment requirements and make a checklist with the items that are required for project completion.
+During the process of the review, you, as the reviewer, need to identify which aspects of the project assignment requirements still need to be completed by the author. You also need to include any additional items to the checklist that you think are necessary for successful project release by the author. Using Markdown, create an issue in the author's repository, which will contain review checklist. 
+
+\subsection*{Elevator Pitch}
+As we prepare to finalize the course, prepare a 30-second elevator pitch about you. An elevator speech or a mini pitch is  a concise but cohesive  story about yourself that positions you to obtain what you are aiming for. Imagine you are trapped with an influential individual who can make or break your next career move, whether it is a move into a industry job or gaining an acceptance to graduate school. 
+
+Your elevator speech needs to be concise, a 30-second time will be strictly enforced. Your pitch should be tailored to a specific goal whether it is a particular type of work you are looking for or specific types of graduate programs you are seeking. It is helpful to focus on the solutions you can provide, not on your life story or what you generally do, and to provide concrete details (e.g., don't just say you code, give specific languages or tools you have utilized).
+
+%\vspace{-0.05in}
+\section*{Deliverables and Evaluation}
+%\vspace{-0.05in}
+
+You are invited to submit the following materials:
+\begin{enumerate}
+	\item Updated spreadsheet with relevant information.
+	\item Issue posted in the author's project repository with the requirements outlined above.
+	\item Elevator pitch to be given during the class session on December 6.
+\end{enumerate}
+
+\end{document}
