@@ -1,4 +1,4 @@
-# cs480f2018-assignment6
+# cs480f2018-assignment7
 
 Designed for use with [GitHub Classroom](https://classroom.github.com/), this
 repository contains the assignment sheet for Assignment 6 in Computer Science 480.
